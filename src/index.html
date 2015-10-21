@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proton</title>
+  <link rel="stylesheet" href="css/photon.min.css">
+  <script src="js/context-menu.js" charset="utf-8"></script>
+</head>
+<body>
+
+<div class="window">
+  <header class="toolbar toolbar-header">
+    <h1 class="title"><span class="icon icon-network"></span> Proton</h1>
+
+    <div class="toolbar-actions">
+      <div class="btn-group">
+        <button class="btn btn-default">
+          <span class="icon icon-home"></span>
+        </button>
+        <button class="btn btn-default">
+          <span class="icon icon-folder"></span>
+        </button>
+        <button class="btn btn-default active">
+          <span class="icon icon-cloud"></span>
+        </button>
+        <button class="btn btn-default">
+          <span class="icon icon-popup"></span>
+        </button>
+        <button class="btn btn-default">
+          <span class="icon icon-shuffle"></span>
+        </button>
+      </div>
+
+      <button class="btn btn-default">
+        <span class="icon icon-home icon-text"></span>
+        Filters
+      </button>
+
+      <button class="btn btn-default btn-dropdown pull-right">
+        <span class="icon icon-megaphone"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="tab-group">
+    <div class="tab-item active">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Main Tab
+    </div>
+    <div class="tab-item">
+      <span class="icon icon-cancel icon-close-tab"></span>
+      Second Tab
+    </div>
+    <div class="tab-item tab-item-fixed">
+      <span class="icon icon-plus"></span>
+    </div>
+  </div>
+
+  <!-- Your app's content goes inside .window-content -->
+  <div class="window-content">
+    <div class="pane-group">
+      <div class="pane pane-sm sidebar">
+        <nav class="nav-group">
+          <h5 class="nav-group-title">Nav</h5>
+          <span class="nav-group-item active">
+            <span class="icon icon-network"></span>
+            Proton
+          </span>
+        </nav>
+      </div>
+
+      <div class="pane">
+        <ul class="list-group">
+          <li class="list-group-header">
+            <input class="form-control" type="text" placeholder="Search">
+          </li>
+          <li class="list-group-item" contextable>
+            <span class="icon icon-user media-object pull-left" width="32" height="32"></span>
+            <div class="media-body">
+              <strong>List item title</strong>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+          <li class="list-group-item" contextable>
+            <span class="icon icon-user media-object pull-left" width="32" height="32"></span>
+            <div class="media-body">
+              <strong>List item title</strong>
+              <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="pane">
+        <table class="table-striped">
+          <thead>
+            <tr>
+              <th>Sender</th>
+              <th>Subject</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Hal</td>
+              <td>Hello, Dave. You're looking well today.</td>
+              <td>1 day ago</td>
+            </tr>
+            <tr>
+              <td>Hal</td>
+              <td>I'm sorry, Dave. I'm afraid I can't do that.</td>
+              <td>23 minutes ago</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
