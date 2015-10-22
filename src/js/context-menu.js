@@ -8,7 +8,7 @@ var menu = new Menu()
 
 menu.append(new MenuItem({
   label: 'Alert Dialog',
-  click: function () {
+  click: function (item, focusedWindow) {
     window.alert('This is an alert!')
   }
 }))
@@ -16,8 +16,8 @@ menu.append(new MenuItem({
 menu.append(new MenuItem({ type: 'separator' }))
 menu.append(new MenuItem({
   label: 'Console Log',
-  click: function () {
-    console.log('context menu event', arguments)
+  click: function (item, focusedWindow) {
+    console.log('context menu event', item, focusedWindow)
   }
 }))
 menu.append(new MenuItem({

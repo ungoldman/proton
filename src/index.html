@@ -14,29 +14,18 @@
     <div class="toolbar-actions">
       <div class="btn-group">
         <button class="btn btn-default">
-          <span class="icon icon-home"></span>
+          <span class="icon icon-pencil icon-text"></span>
+          Compose
         </button>
-        <button class="btn btn-default">
-          <span class="icon icon-folder"></span>
-        </button>
-        <button class="btn btn-default active">
-          <span class="icon icon-cloud"></span>
-        </button>
-        <button class="btn btn-default">
-          <span class="icon icon-popup"></span>
-        </button>
-        <button class="btn btn-default">
-          <span class="icon icon-shuffle"></span>
+        <button class="btn btn-default btn-dropdown">
+          <span class="icon icon-folder icon-text"></span>
+          Open
         </button>
       </div>
 
-      <button class="btn btn-default">
-        <span class="icon icon-home icon-text"></span>
-        Filters
-      </button>
-
       <button class="btn btn-default btn-dropdown pull-right">
-        <span class="icon icon-megaphone"></span>
+        <span class="icon icon-cog icon-text"></span>
+        Settings
       </button>
     </div>
   </header>
@@ -44,11 +33,11 @@
   <div class="tab-group">
     <div class="tab-item active">
       <span class="icon icon-cancel icon-close-tab"></span>
-      Main Tab
+      Tab 1
     </div>
     <div class="tab-item">
       <span class="icon icon-cancel icon-close-tab"></span>
-      Second Tab
+      Tab 2
     </div>
     <div class="tab-item tab-item-fixed">
       <span class="icon icon-plus"></span>
@@ -61,9 +50,17 @@
       <div class="pane pane-sm sidebar">
         <nav class="nav-group">
           <h5 class="nav-group-title">Nav</h5>
-          <span class="nav-group-item active">
+          <span class="nav-group-item">
             <span class="icon icon-network"></span>
             Proton
+          </span>
+          <span class="nav-group-item active">
+            <span class="icon icon-inbox"></span>
+            Inbox
+          </span>
+          <span class="nav-group-item">
+            <span class="icon icon-trash"></span>
+            Trash
           </span>
         </nav>
       </div>
@@ -73,18 +70,18 @@
           <li class="list-group-header">
             <input class="form-control" type="text" placeholder="Search">
           </li>
-          <li class="list-group-item" contextable>
-            <span class="icon icon-user media-object pull-left" width="32" height="32"></span>
+          <li class="list-group-item active" contextable>
+            <img class="media-object pull-left" src="http://www.adiumxtras.com/images/pictures/hal_9000_revisited_1_36472_8100_image_12577.png" width="32" height="32">
             <div class="media-body">
-              <strong>List item title</strong>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <strong>Hal</strong>
+              <p>HAL 9000 is a fictional character in Arthur C. Clarke's Space Odyssey series.</p>
             </div>
           </li>
           <li class="list-group-item" contextable>
-            <span class="icon icon-user media-object pull-left" width="32" height="32"></span>
+            <img class="media-object pull-left" src="https://31.media.tumblr.com/avatar_5d9c61491fcc_128.png" width="32" height="32">
             <div class="media-body">
-              <strong>List item title</strong>
-              <p>Lorem ipsum dolor sit amet.</p>
+              <strong>Dave</strong>
+              <p>Dr. David Bowman serves as the protagonist of 2001: A Space Odyssey.</p>
             </div>
           </li>
         </ul>
