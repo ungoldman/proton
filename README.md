@@ -4,4 +4,8 @@
 
 ![](screenshot.png)
 
-**wip**
+Abandoned Project
+
+## License
+
+ISC
