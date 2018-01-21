@@ -1,27 +1,38 @@
-var app = require('app')
-var BrowserWindow = require('browser-window')
-var crashReporter = require('crash-reporter')
-var win
+const { app, BrowserWindow } = require('electron')
+const path = require('path')
+const url = require('url')
 
-crashReporter.start()
+let mainWindow
 
-app.on('window-all-closed', function () {
+function createWindow () {
+  mainWindow = new BrowserWindow({
+    width: 840,
+    height: 480,
+    minWidth: 500,
+    minHeight: 200,
+    acceptFirstMouse: true,
+    titleBarStyle: 'hidden'
+  })
+
+  mainWindow.loadURL(url.format({
+    pathname: path.join(__dirname, 'index.html'),
+    protocol: 'file:',
+    slashes: true
+  }))
+
+  mainWindow.webContents.openDevTools()
+
+  mainWindow.on('closed', _ => {
+    mainWindow = null
+  })
+}
+
+app.on('ready', createWindow)
+
+app.on('window-all-closed', _ => {
   if (process.platform !== 'darwin') app.quit()
 })
 
-app.on('ready', function () {
-  win = new BrowserWindow({
-    width: 840,
-    height: 480,
-    'min-width': 500,
-    'min-height': 200,
-    'accept-first-mouse': true,
-    'title-bar-style': 'hidden'
-  })
-
-  win.loadUrl('file://' + __dirname + '/index.html')
-  win.webContents.openDevTools()
-  win.on('closed', function () {
-    win = null
-  })
+app.on('activate', _ => {
+  if (mainWindow === null) createWindow()
 })
